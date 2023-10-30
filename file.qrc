@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="iconeFooter">
+    <file>Images/iconeFooter.png</file>
+  </qresource>
+  <qresource prefix="icone">
+    <file>Images/icone.png</file>
+  </qresource>
+</RCC>
