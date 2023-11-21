@@ -14,11 +14,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 830)
+        MainWindow.resize(800, 839)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/icone/Images/icone.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
-        MainWindow.setStyleSheet("background-color: rgb(239, 241, 245);")
+        MainWindow.setStyleSheet("background-color: #FFFFFF;\n"
+"")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -29,45 +30,195 @@ class Ui_MainWindow(object):
         self.frame.setObjectName("frame")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.label_9 = QtWidgets.QLabel(self.frame)
+        font = QtGui.QFont()
+        font.setFamily("Arial Black")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_9.setFont(font)
+        self.label_9.setObjectName("label_9")
+        self.verticalLayout_2.addWidget(self.label_9)
         self.frame_4 = QtWidgets.QFrame(self.frame)
-        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_4.setFrameShape(QtWidgets.QFrame.Box)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_4)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.buttonConnectZap = QtWidgets.QPushButton(self.frame_4)
-        self.buttonConnectZap.setMinimumSize(QtCore.QSize(368, 0))
+        self.buttonConnectZap.setMinimumSize(QtCore.QSize(0, 0))
         self.buttonConnectZap.setMaximumSize(QtCore.QSize(368, 16777215))
-        self.buttonConnectZap.setStyleSheet("")
+        font = QtGui.QFont()
+        font.setFamily("Arial Black")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.buttonConnectZap.setFont(font)
+        self.buttonConnectZap.setStyleSheet("QPushButton {\n"
+"  background-color: #3EB2FD;\n"
+"  border-radius: 22px;\n"
+"  border-width: 0;\n"
+"  color: #FFFFFF;\n"
+"  font-size: 1rem;\n"
+"  height: auto;\n"
+"  line-height: 1.5;\n"
+"  padding: 6px 20px;\n"
+"  position: relative;\n"
+"  text-align: center;\n"
+"  vertical-align: top;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"  opacity: .3;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"  background-image: linear-gradient(#51A9EE, #147BCD);\n"
+"  border-color: #1482D0;\n"
+"  text-decoration: none;\n"
+"}\n"
+"\n"
+"QPushButton:active {\n"
+"  background-image: linear-gradient(#3D94D9, #0067B9);\n"
+"  border-color: #006DBC;\n"
+"  outline: none;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"  outline: none;\n"
+"}\n"
+"")
         self.buttonConnectZap.setObjectName("buttonConnectZap")
         self.horizontalLayout_2.addWidget(self.buttonConnectZap)
-        self.label_3 = QtWidgets.QLabel(self.frame_4)
-        self.label_3.setMaximumSize(QtCore.QSize(80, 16777215))
+        self.frame_17 = QtWidgets.QFrame(self.frame_4)
+        self.frame_17.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_17.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_17.setObjectName("frame_17")
+        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.frame_17)
+        self.verticalLayout_7.setObjectName("verticalLayout_7")
+        self.label_3 = QtWidgets.QLabel(self.frame_17)
+        self.label_3.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.label_3.setAlignment(QtCore.Qt.AlignCenter)
         self.label_3.setObjectName("label_3")
-        self.horizontalLayout_2.addWidget(self.label_3)
-        self.labelStatusConnectZap = QtWidgets.QLabel(self.frame_4)
+        self.verticalLayout_7.addWidget(self.label_3)
+        self.labelStatusConnectZap = QtWidgets.QLabel(self.frame_17)
+        self.labelStatusConnectZap.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.labelStatusConnectZap.setAlignment(QtCore.Qt.AlignCenter)
         self.labelStatusConnectZap.setObjectName("labelStatusConnectZap")
-        self.horizontalLayout_2.addWidget(self.labelStatusConnectZap)
+        self.verticalLayout_7.addWidget(self.labelStatusConnectZap)
+        self.horizontalLayout_2.addWidget(self.frame_17)
         self.verticalLayout_2.addWidget(self.frame_4)
-        self.frame_5 = QtWidgets.QFrame(self.frame)
+        self.label_10 = QtWidgets.QLabel(self.frame)
+        font = QtGui.QFont()
+        font.setFamily("Arial Black")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_10.setFont(font)
+        self.label_10.setObjectName("label_10")
+        self.verticalLayout_2.addWidget(self.label_10)
+        self.frame_16 = QtWidgets.QFrame(self.frame)
+        self.frame_16.setFrameShape(QtWidgets.QFrame.Box)
+        self.frame_16.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_16.setObjectName("frame_16")
+        self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.frame_16)
+        self.verticalLayout_6.setObjectName("verticalLayout_6")
+        self.frame_5 = QtWidgets.QFrame(self.frame_16)
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frame_5)
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.buttonSelecionaArquivo = QtWidgets.QPushButton(self.frame_5)
+        font = QtGui.QFont()
+        font.setFamily("Arial Black")
+        font.setPointSize(10)
+        self.buttonSelecionaArquivo.setFont(font)
+        self.buttonSelecionaArquivo.setStyleSheet("QPushButton {\n"
+"  background-color: #3EB2FD;\n"
+"  border-radius: 22px;\n"
+"  border-width: 0;\n"
+"  color: #FFFFFF;\n"
+"  font-size: 1rem;\n"
+"  height: auto;\n"
+"  line-height: 1.5;\n"
+"  padding: 6px 20px;\n"
+"  position: relative;\n"
+"  text-align: center;\n"
+"  vertical-align: top;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"  opacity: .3;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"  background-image: linear-gradient(#51A9EE, #147BCD);\n"
+"  border-color: #1482D0;\n"
+"  text-decoration: none;\n"
+"}\n"
+"\n"
+"QPushButton:active {\n"
+"  background-image: linear-gradient(#3D94D9, #0067B9);\n"
+"  border-color: #006DBC;\n"
+"  outline: none;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"  outline: none;\n"
+"}\n"
+"")
         self.buttonSelecionaArquivo.setObjectName("buttonSelecionaArquivo")
         self.horizontalLayout_3.addWidget(self.buttonSelecionaArquivo)
         self.buttonGeraArquivo = QtWidgets.QPushButton(self.frame_5)
         self.buttonGeraArquivo.setEnabled(False)
+        font = QtGui.QFont()
+        font.setFamily("Arial Black")
+        font.setPointSize(10)
+        self.buttonGeraArquivo.setFont(font)
+        self.buttonGeraArquivo.setStyleSheet("QPushButton {\n"
+"  background-color: #3EB2FD;\n"
+"  border-radius: 22px;\n"
+"  border-width: 0;\n"
+"  color: #FFFFFF;\n"
+"  font-size: 1rem;\n"
+"  height: auto;\n"
+"  line-height: 1.5;\n"
+"  padding: 6px 20px;\n"
+"  position: relative;\n"
+"  text-align: center;\n"
+"  vertical-align: top;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"  opacity: .3;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"  background-image: linear-gradient(#51A9EE, #147BCD);\n"
+"  border-color: #1482D0;\n"
+"  text-decoration: none;\n"
+"}\n"
+"\n"
+"QPushButton:active {\n"
+"  background-image: linear-gradient(#3D94D9, #0067B9);\n"
+"  border-color: #006DBC;\n"
+"  outline: none;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"  outline: none;\n"
+"}\n"
+"")
         self.buttonGeraArquivo.setCheckable(False)
         self.buttonGeraArquivo.setAutoDefault(False)
         self.buttonGeraArquivo.setDefault(False)
         self.buttonGeraArquivo.setFlat(False)
         self.buttonGeraArquivo.setObjectName("buttonGeraArquivo")
         self.horizontalLayout_3.addWidget(self.buttonGeraArquivo)
-        self.verticalLayout_2.addWidget(self.frame_5)
-        self.frame_7 = QtWidgets.QFrame(self.frame)
+        self.verticalLayout_6.addWidget(self.frame_5)
+        self.frame_7 = QtWidgets.QFrame(self.frame_16)
         self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_7.setObjectName("frame_7")
@@ -81,8 +232,8 @@ class Ui_MainWindow(object):
         self.labelArquivoSelecionado.setText("")
         self.labelArquivoSelecionado.setObjectName("labelArquivoSelecionado")
         self.horizontalLayout_5.addWidget(self.labelArquivoSelecionado)
-        self.verticalLayout_2.addWidget(self.frame_7)
-        self.frame_6 = QtWidgets.QFrame(self.frame)
+        self.verticalLayout_6.addWidget(self.frame_7)
+        self.frame_6 = QtWidgets.QFrame(self.frame_16)
         self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_6.setObjectName("frame_6")
@@ -102,23 +253,87 @@ class Ui_MainWindow(object):
         self.labelTempoEstimado = QtWidgets.QLabel(self.frame_6)
         self.labelTempoEstimado.setObjectName("labelTempoEstimado")
         self.horizontalLayout_4.addWidget(self.labelTempoEstimado)
-        self.verticalLayout_2.addWidget(self.frame_6)
-        self.label_7 = QtWidgets.QLabel(self.frame)
+        self.verticalLayout_6.addWidget(self.frame_6)
+        self.verticalLayout_2.addWidget(self.frame_16)
+        self.label_11 = QtWidgets.QLabel(self.frame)
+        font = QtGui.QFont()
+        font.setFamily("Arial Black")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_11.setFont(font)
+        self.label_11.setObjectName("label_11")
+        self.verticalLayout_2.addWidget(self.label_11)
+        self.frame_15 = QtWidgets.QFrame(self.frame)
+        self.frame_15.setFrameShape(QtWidgets.QFrame.Box)
+        self.frame_15.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_15.setObjectName("frame_15")
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.frame_15)
+        self.verticalLayout_5.setObjectName("verticalLayout_5")
+        self.label_7 = QtWidgets.QLabel(self.frame_15)
         self.label_7.setObjectName("label_7")
-        self.verticalLayout_2.addWidget(self.label_7)
-        self.textoParaEnviar = QtWidgets.QPlainTextEdit(self.frame)
+        self.verticalLayout_5.addWidget(self.label_7)
+        self.textoParaEnviar = QtWidgets.QPlainTextEdit(self.frame_15)
+        self.textoParaEnviar.setStyleSheet("background-color: #E8F0FE;")
         self.textoParaEnviar.setInputMethodHints(QtCore.Qt.ImhNone)
         self.textoParaEnviar.setObjectName("textoParaEnviar")
-        self.verticalLayout_2.addWidget(self.textoParaEnviar)
-        self.verticalLayout.addWidget(self.frame)
-        self.frame_8 = QtWidgets.QFrame(self.centralwidget)
-        self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.verticalLayout_5.addWidget(self.textoParaEnviar)
+        self.verticalLayout_2.addWidget(self.frame_15)
+        self.label_12 = QtWidgets.QLabel(self.frame)
+        font = QtGui.QFont()
+        font.setFamily("Arial Black")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_12.setFont(font)
+        self.label_12.setObjectName("label_12")
+        self.verticalLayout_2.addWidget(self.label_12)
+        self.frame_8 = QtWidgets.QFrame(self.frame)
+        self.frame_8.setFrameShape(QtWidgets.QFrame.Box)
         self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_8.setObjectName("frame_8")
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.frame_8)
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.buttonEnviar = QtWidgets.QPushButton(self.frame_8)
         self.buttonEnviar.setMinimumSize(QtCore.QSize(368, 0))
+        font = QtGui.QFont()
+        font.setFamily("Arial Black")
+        font.setPointSize(10)
+        self.buttonEnviar.setFont(font)
+        self.buttonEnviar.setStyleSheet("QPushButton {\n"
+"  background-color: #3EB2FD;\n"
+"  border-radius: 22px;\n"
+"  border-width: 0;\n"
+"  color: #FFFFFF;\n"
+"  font-size: 1rem;\n"
+"  height: auto;\n"
+"  line-height: 1.5;\n"
+"  padding: 6px 20px;\n"
+"  position: relative;\n"
+"  text-align: center;\n"
+"  vertical-align: top;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"  opacity: .3;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"  background-image: linear-gradient(#51A9EE, #147BCD);\n"
+"  border-color: #1482D0;\n"
+"  text-decoration: none;\n"
+"}\n"
+"\n"
+"QPushButton:active {\n"
+"  background-image: linear-gradient(#3D94D9, #0067B9);\n"
+"  border-color: #006DBC;\n"
+"  outline: none;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"  outline: none;\n"
+"}\n"
+"")
         self.buttonEnviar.setObjectName("buttonEnviar")
         self.horizontalLayout_6.addWidget(self.buttonEnviar)
         self.frame_9 = QtWidgets.QFrame(self.frame_8)
@@ -137,17 +352,65 @@ class Ui_MainWindow(object):
         self.label_8.setObjectName("label_8")
         self.horizontalLayout_7.addWidget(self.label_8)
         self.lineEditNumeroTeste = QtWidgets.QLineEdit(self.frame_10)
+        self.lineEditNumeroTeste.setStyleSheet("background-color: #E8F0FE;")
         self.lineEditNumeroTeste.setInputMethodHints(QtCore.Qt.ImhPreferNumbers)
         self.lineEditNumeroTeste.setObjectName("lineEditNumeroTeste")
         self.horizontalLayout_7.addWidget(self.lineEditNumeroTeste)
         self.verticalLayout_3.addWidget(self.frame_10)
         self.buttonEnviarTeste = QtWidgets.QPushButton(self.frame_9)
+        font = QtGui.QFont()
+        font.setFamily("Arial Black")
+        font.setPointSize(10)
+        self.buttonEnviarTeste.setFont(font)
+        self.buttonEnviarTeste.setStyleSheet("QPushButton {\n"
+"  background-color: #3EB2FD;\n"
+"  border-radius: 22px;\n"
+"  border-width: 0;\n"
+"  color: #FFFFFF;\n"
+"  font-size: 1rem;\n"
+"  height: auto;\n"
+"  line-height: 1.5;\n"
+"  padding: 6px 20px;\n"
+"  position: relative;\n"
+"  text-align: center;\n"
+"  vertical-align: top;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"  opacity: .3;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"  background-image: linear-gradient(#51A9EE, #147BCD);\n"
+"  border-color: #1482D0;\n"
+"  text-decoration: none;\n"
+"}\n"
+"\n"
+"QPushButton:active {\n"
+"  background-image: linear-gradient(#3D94D9, #0067B9);\n"
+"  border-color: #006DBC;\n"
+"  outline: none;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"  outline: none;\n"
+"}\n"
+"")
         self.buttonEnviarTeste.setObjectName("buttonEnviarTeste")
         self.verticalLayout_3.addWidget(self.buttonEnviarTeste)
         self.horizontalLayout_6.addWidget(self.frame_9)
-        self.verticalLayout.addWidget(self.frame_8)
-        self.frame_11 = QtWidgets.QFrame(self.centralwidget)
-        self.frame_11.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.verticalLayout_2.addWidget(self.frame_8)
+        self.label_14 = QtWidgets.QLabel(self.frame)
+        font = QtGui.QFont()
+        font.setFamily("Arial Black")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_14.setFont(font)
+        self.label_14.setObjectName("label_14")
+        self.verticalLayout_2.addWidget(self.label_14)
+        self.frame_11 = QtWidgets.QFrame(self.frame)
+        self.frame_11.setFrameShape(QtWidgets.QFrame.Box)
         self.frame_11.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_11.setObjectName("frame_11")
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.frame_11)
@@ -188,12 +451,51 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8.addWidget(self.frame_12)
         self.buttonExportarListaSemNumerosErros = QtWidgets.QPushButton(self.frame_11)
         self.buttonExportarListaSemNumerosErros.setEnabled(False)
+        font = QtGui.QFont()
+        font.setFamily("Arial Black")
+        font.setPointSize(10)
+        self.buttonExportarListaSemNumerosErros.setFont(font)
+        self.buttonExportarListaSemNumerosErros.setStyleSheet("QPushButton {\n"
+"  background-color: #3EB2FD;\n"
+"  border-radius: 22px;\n"
+"  border-width: 0;\n"
+"  color: #FFFFFF;\n"
+"  font-size: 1rem;\n"
+"  height: auto;\n"
+"  line-height: 1.5;\n"
+"  padding: 6px 20px;\n"
+"  position: relative;\n"
+"  text-align: center;\n"
+"  vertical-align: top;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"  opacity: .3;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"  background-image: linear-gradient(#51A9EE, #147BCD);\n"
+"  border-color: #1482D0;\n"
+"  text-decoration: none;\n"
+"}\n"
+"\n"
+"QPushButton:active {\n"
+"  background-image: linear-gradient(#3D94D9, #0067B9);\n"
+"  border-color: #006DBC;\n"
+"  outline: none;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"  outline: none;\n"
+"}\n"
+"")
         self.buttonExportarListaSemNumerosErros.setObjectName("buttonExportarListaSemNumerosErros")
         self.horizontalLayout_8.addWidget(self.buttonExportarListaSemNumerosErros)
-        self.verticalLayout.addWidget(self.frame_11)
+        self.verticalLayout_2.addWidget(self.frame_11)
+        self.verticalLayout.addWidget(self.frame)
         self.frame_2 = QtWidgets.QFrame(self.centralwidget)
         self.frame_2.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.frame_2.setStyleSheet("background-color: rgb(6, 16, 75);")
+        self.frame_2.setStyleSheet("background-color: #3EB2FD;")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
@@ -238,9 +540,11 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Envio Automático"))
+        self.label_9.setText(_translate("MainWindow", "Passo 1:"))
         self.buttonConnectZap.setText(_translate("MainWindow", "Conectar Whatsapp"))
         self.label_3.setText(_translate("MainWindow", "Status: "))
         self.labelStatusConnectZap.setText(_translate("MainWindow", "Não Conectado"))
+        self.label_10.setText(_translate("MainWindow", "Passo 2:"))
         self.buttonSelecionaArquivo.setText(_translate("MainWindow", "Selecionar Arquivo"))
         self.buttonGeraArquivo.setText(_translate("MainWindow", "Gerar Arquivo Exemplo (não implementado)"))
         self.label_4.setText(_translate("MainWindow", "Arquivo Selecionado: "))
@@ -248,18 +552,21 @@ class Ui_MainWindow(object):
         self.labelTotalContatos.setText(_translate("MainWindow", "0"))
         self.label_6.setText(_translate("MainWindow", "Tempo Estimado: "))
         self.labelTempoEstimado.setText(_translate("MainWindow", "0"))
+        self.label_11.setText(_translate("MainWindow", "Passo 3:"))
         self.label_7.setText(_translate("MainWindow", "Mensagem a enviar:\n"
 "Já será adiconado ao inicio da mensagem Oi {PrimeiroNome}, tudo bom com você?"))
+        self.label_12.setText(_translate("MainWindow", "Passo 4:"))
         self.buttonEnviar.setText(_translate("MainWindow", "Enviar"))
         self.label_8.setText(_translate("MainWindow", "Enviar Teste para: "))
         self.buttonEnviarTeste.setText(_translate("MainWindow", "Enviar Teste"))
+        self.label_14.setText(_translate("MainWindow", "Resultado:"))
         self.label_13.setText(_translate("MainWindow", "Total de mensagens enviadas com sucesso: "))
         self.labelEnviadosSucesso.setText(_translate("MainWindow", "0"))
         self.label_15.setText(_translate("MainWindow", "Total de mensagens não enviadas:"))
         self.labelEnviadosErro.setText(_translate("MainWindow", "0"))
         self.buttonExportarListaSemNumerosErros.setText(_translate("MainWindow", "Exporta Lista sem Números com erro(não implementado)"))
         self.label_2.setText(_translate("MainWindow", "SENAI \"Almirante Tamandaré\""))
-        self.label.setText(_translate("MainWindow", "versão 0.9.0\n"
+        self.label.setText(_translate("MainWindow", "versão 0.9.2\n"
 "Desenvolvido por Eliabel Barreto"))
 import file_rc
 

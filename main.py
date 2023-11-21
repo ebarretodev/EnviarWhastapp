@@ -1,10 +1,12 @@
 # usado para interface gráfica
-from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QLabel, QFileDialog, QLineEdit, QPlainTextEdit
-from PyQt5.QtCore import QObject, QThread, pyqtSignal
+from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QLabel, QFileDialog, QLineEdit, QPlainTextEdit, QSplashScreen, QDesktopWidget, QProgressBar
+from PyQt5.uic import loadUi
+from PyQt5.QtCore import QObject, QThread, pyqtSignal, Qt
 # from PyQt5 import uic
 
 # GUI FILE
 from screen import Ui_MainWindow
+from splash import Ui_Form
 
 import sys
 import file_rc
@@ -97,6 +99,8 @@ class UI(QMainWindow):
         super(UI, self).__init__()
         # load the ui file
         # uic.loadUi("screen.ui", self)
+        # loadUi("screen.ui", self)
+
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
@@ -252,7 +256,41 @@ class UI(QMainWindow):
         self.navegador.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p').send_keys(Keys.ENTER)
         time.sleep(5)
 
+class SplashScreen(QSplashScreen):
+    def __init__(self):
+        super(QSplashScreen, self).__init__()
+        # loadUi("splash.ui", self)
+
+
+        self.ui = Ui_Form()
+        self.ui.setupUi(self)
+        self.progressBar = self.findChild(QProgressBar, "progressBar")
+
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        # pixmap = QPixmap("images.png")
+        # self.setPixmap(pixmap)
+        self.center()
+        self.show()
+        self.progress()
+
+    def progress(self):
+        for i in range(40):
+            time.sleep(0.1)
+            self.progressBar.setValue(i)
+
+    def center(self):
+        qr = self.frameGeometry()
+        cp = QDesktopWidget().availableGeometry().center()
+        qr.moveCenter(cp)
+        self.move(qr.topLeft())
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+
+    splash = SplashScreen()
+
     UIWindow = UI()
+
+    splash.finish(UIWindow)
+
     app.exec_()
