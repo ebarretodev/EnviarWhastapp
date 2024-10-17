@@ -1,3 +1,5 @@
 ContatosEnviar.xlsx
 build/
-main.spec
+*.spec
+__pycache__/
+dist/EnvioAutomatio/
