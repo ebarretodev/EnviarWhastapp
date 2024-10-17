@@ -82,7 +82,7 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "Form"))
         self.label.setText(_translate("Form", "Bem vindo ao software de Envio Automático.\n"
 "Carregando o aplicativo! Aguarde..."))
-        self.label_2.setText(_translate("Form", "versão 0.9.2\n"
+        self.label_2.setText(_translate("Form", "versão 0.9.3\n"
 "Desenvolvido por Eliabel Barreto"))
 import file_rc
 

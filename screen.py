@@ -566,7 +566,7 @@ class Ui_MainWindow(object):
         self.labelEnviadosErro.setText(_translate("MainWindow", "0"))
         self.buttonExportarListaSemNumerosErros.setText(_translate("MainWindow", "Exporta Lista sem Números com erro(não implementado)"))
         self.label_2.setText(_translate("MainWindow", "SENAI \"Almirante Tamandaré\""))
-        self.label.setText(_translate("MainWindow", "versão 0.9.2\n"
+        self.label.setText(_translate("MainWindow", "versão 0.9.3\n"
 "Desenvolvido por Eliabel Barreto"))
 import file_rc
 

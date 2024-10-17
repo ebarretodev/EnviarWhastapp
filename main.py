@@ -13,6 +13,7 @@ import file_rc
 
 # usado para controle dos arquivos
 import pandas as pd
+import openpyxl
 
 # usado para fazer pausas no programa
 import time
@@ -73,14 +74,15 @@ class WorkerEnviarMensagens(QObject):
                 time.sleep(10)
                 # xpath do campo que tem que apertar enter
                 # //*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p
+                xPathToTest = '//*[@id="main"]/footer/div[1]/div/span/div/div[2]/div[1]/div/div'
                 testeLoop = 0
-                while len(self.navegador.find_elements(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p')) < 1 :
+                while len(self.navegador.find_elements(By.XPATH, xPathToTest)) < 1 :
                     time.sleep(1)
                     testeLoop += 1
                     if testeLoop > 20:
                         raise Exception("Não foi concluir, Timeout")
 
-                self.navegador.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p').send_keys(Keys.ENTER)
+                self.navegador.find_element(By.XPATH, xPathToTest).send_keys(Keys.ENTER)
                 testeTotalOk += 1
                 self.totalOk.emit(testeTotalOk)
                 time.sleep(5)
@@ -187,8 +189,8 @@ class UI(QMainWindow):
                 stringToPrint += f'{tempoSegundos}seg '
 
                 self.labelTempoEstimado.setText(stringToPrint)
-        except:
-            pass
+        except Exception as e:
+            print("Error occurr: ", e)
         
     #TODO fazer implementação do gerador de Arquivo Exemplo
     def gerarArquivoExemplo(self): 
@@ -251,9 +253,10 @@ class UI(QMainWindow):
         time.sleep(10)
         # xpath do campo que tem que apertar enter
         # //*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p
-        while len(self.navegador.find_elements(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p')) < 1 :
+        xPathToTest = '//*[@id="main"]/footer/div[1]/div/span/div/div[2]/div[1]/div/div'
+        while len(self.navegador.find_elements(By.XPATH, xPathToTest)) < 1 :
             time.sleep(1)
-        self.navegador.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p').send_keys(Keys.ENTER)
+        self.navegador.find_element(By.XPATH, xPathToTest).send_keys(Keys.ENTER)
         time.sleep(5)
 
 class SplashScreen(QSplashScreen):
